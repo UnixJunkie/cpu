@@ -24,5 +24,5 @@ AC_CHECK_DECLS([thread_policy_set], [], [], [[
 #include <mach/thread_policy.h>
 ]])
 
-AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_HEADERS([src/config.h])
 AC_OUTPUT
