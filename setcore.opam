@@ -6,6 +6,8 @@ homepage: "https://github.com/UnixJunkie/setcore"
 dev-repo: "git+https://github.com/UnixJunkie/setcore.git"
 bug-reports: "https://github.com/UnixJunkie/setcore/issues"
 build: [
+  ["autoconf"]
+  ["autoheader"]
   ["./configure"] 
   ["dune" "build" "-p" name]
 ]
