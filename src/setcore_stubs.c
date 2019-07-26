@@ -1,14 +1,14 @@
 #include "config.h"
+#if HAVE_DECL_SCHED_SETAFFINITY
+#define _GNU_SOURCE             /* See feature_test_macros(7) */
+#include <sched.h>
+#endif
 #include <stdio.h>
 #include <unistd.h>
 #if HAVE_MACH_THREAD_POLICY_H
 #include <mach/mach_init.h>
 #include <mach/thread_policy.h>
 // #include <mach/sched.h>
-#endif
-#if HAVE_DECL_SCHED_SETAFFINITY
-//#define _GNU_SOURCE             /* See feature_test_macros(7) */
-#include <sched.h>
 #endif
 #include <errno.h>
 #include <caml/mlvalues.h>
