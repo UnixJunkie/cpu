@@ -7,6 +7,7 @@
 #include <unistd.h>
 #if HAVE_MACH_THREAD_POLICY_H
 #include <mach/mach_init.h>
+#include <mach/thread_act.h>
 #include <mach/thread_policy.h>
 // #include <mach/sched.h>
 #endif
@@ -46,7 +47,7 @@ CAMLprim value setcore(value which) {
       affinityData.affinity_tag = w;
       retcode = thread_policy_set(mach_thread_self(),
                         THREAD_AFFINITY_POLICY,
-                        &affinityData,
+                        (thread_policy_t)&affinityData,
                         THREAD_AFFINITY_POLICY_COUNT);
       if(retcode) {
         fprintf(stderr,"MAC OS X: Failed pinning to cpu %d, trying %d/2\n",w, w);
