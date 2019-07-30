@@ -1,7 +1,6 @@
 opam-version: "2.0"
 authors: "Roberto Di Cosmo <roberto@dicosmo.org>"
 maintainer: "unixjunkie@sdf.org"
-version: "0.0.1"
 homepage: "https://github.com/UnixJunkie/setcore"
 dev-repo: "git+https://github.com/UnixJunkie/setcore.git"
 bug-reports: "https://github.com/UnixJunkie/setcore/issues"
@@ -9,7 +8,16 @@ build: [
   ["autoconf"]
   ["autoheader"]
   ["./configure"] 
-  ["dune" "build" "-p" name]
+  ["dune" "build" "-p" name "-j" jobs]
 ]
-depends: ["ocaml"]
+depends: [
+  "ocaml"
+  "ocamlfind"
+  "dune"
+]
 synopsis: "Pin current process to given core number"
+#url {
+#  src: "https://github.com/UnixJunkie/setcore/archive/vXXX.tar.gz"
+#  checksum: "md5=YYY"
+#}
+
