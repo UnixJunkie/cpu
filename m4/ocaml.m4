@@ -161,45 +161,6 @@ AC_DEFUN([AC_PROG_CAMLP4],
 ])
 
 
-AC_DEFUN([AC_PROG_FINDLIB],
-[dnl
-  AC_REQUIRE([AC_PROG_OCAML])dnl
-
-  # checking for ocamlfind
-  AC_CHECK_TOOL([OCAMLFIND],[ocamlfind],[no])
-  AC_SUBST([OCAMLFIND])
-])
-
-
-dnl Thanks to Jim Meyering for working this next bit out for us.
-dnl XXX We should define AS_TR_SH if it's not defined already
-dnl (eg. for old autoconf).
-AC_DEFUN([AC_CHECK_OCAML_PKG],
-[dnl
-  AC_REQUIRE([AC_PROG_FINDLIB])dnl
-
-  AC_MSG_CHECKING([for OCaml findlib package $1])
-
-  unset found
-  unset pkg
-  found=no
-  for pkg in $1 $2 ; do
-    if $OCAMLFIND query $pkg >/dev/null 2>/dev/null; then
-       AC_MSG_RESULT([found])
-       AS_TR_SH([OCAML_PKG_$1])=$pkg
-       found=yes
-       break
-    fi
-  done
-  if test "$found" = "no" ; then
-     AC_MSG_RESULT([not found])
-     AS_TR_SH([OCAML_PKG_$1])=no
-  fi
-
-  AC_SUBST(AS_TR_SH([OCAML_PKG_$1]))
-])
-
-
 AC_DEFUN([AC_CHECK_OCAML_MODULE],
 [dnl
   AC_MSG_CHECKING([for OCaml module $2])

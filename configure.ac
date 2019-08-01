@@ -5,12 +5,6 @@ if test "$OCAMLC" = "no"; then
  AC_MSG_ERROR([You must install the OCaml compiler])
 fi
 
-AC_PROG_FINDLIB
-AC_SUBST(OCAMLFIND)
-if test "$OCAMLFIND" = "no"; then
- AC_MSG_ERROR([You must install OCaml findlib (the ocamlfind command)])
-fi
-
 AC_HEADER_STDC
 AC_CHECK_HEADERS([sched.h])
 AC_CHECK_DECLS([sched_setaffinity], [], [], [[
