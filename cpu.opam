@@ -1,0 +1,25 @@
+opam-version: "2.0"
+authors: "Roberto Di Cosmo <roberto@dicosmo.org>"
+maintainer: "unixjunkie@sdf.org"
+homepage: "https://github.com/UnixJunkie/setcore"
+dev-repo: "git+https://github.com/UnixJunkie/setcore.git"
+bug-reports: "https://github.com/UnixJunkie/setcore/issues"
+build: [
+  ["autoconf"]
+  ["autoheader"]
+  ["./configure"]
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "conf-autoconf" {build}
+  "ocaml"
+  "dune" {>= "1.11.0"}
+]
+synopsis: "Pin current process to given core number"
+description: "
+Can also get the number of CPU cores online.
+"
+#url {
+#  src: "https://github.com/UnixJunkie/setcore/archive/vXXX.tar.gz"
+#  checksum: "md5=YYY"
+#}
