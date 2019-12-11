@@ -8,6 +8,8 @@ build:
 
 clean:
 	dune clean
+	rm -rf autom4te.cache/ configure config.log config.status \
+		src/config.h src/config.h.in
 
 edit:
 	emacs src/*.ml &
