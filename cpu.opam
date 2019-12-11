@@ -1,9 +1,9 @@
 opam-version: "2.0"
 authors: "Roberto Di Cosmo <roberto@dicosmo.org>"
 maintainer: "unixjunkie@sdf.org"
-homepage: "https://github.com/UnixJunkie/setcore"
-dev-repo: "git+https://github.com/UnixJunkie/setcore.git"
-bug-reports: "https://github.com/UnixJunkie/setcore/issues"
+homepage: "https://github.com/UnixJunkie/cpu"
+dev-repo: "git+https://github.com/UnixJunkie/cpu.git"
+bug-reports: "https://github.com/UnixJunkie/cpu/issues"
 build: [
   ["autoconf"]
   ["autoheader"]
@@ -23,6 +23,6 @@ with the Setcore module that is installed by parmap.
 This library can also get the number of CPU cores online.
 "
 #url {
-#  src: "https://github.com/UnixJunkie/setcore/archive/vXXX.tar.gz"
+#  src: "https://github.com/UnixJunkie/cpu/archive/vXXX.tar.gz"
 #  checksum: "md5=YYY"
 #}
