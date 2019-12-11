@@ -1,4 +1,4 @@
-AC_INIT(setcore, 1.0.0, unixjunkie@sdf.org)
+AC_INIT(cpu, 1.0.0, unixjunkie@sdf.org)
 
 AC_PROG_OCAML
 if test "$OCAMLC" = "no"; then
