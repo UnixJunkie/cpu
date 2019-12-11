@@ -17,7 +17,10 @@ depends: [
 ]
 synopsis: "Pin current process to given core number"
 description: "
-Can also get the number of CPU cores online.
+The module installed is called Cpu; in order to not conflic
+with the Setcore module that is installed by parmap.
+
+This library can also get the number of CPU cores online.
 "
 #url {
 #  src: "https://github.com/UnixJunkie/setcore/archive/vXXX.tar.gz"
