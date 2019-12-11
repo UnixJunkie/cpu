@@ -16,6 +16,9 @@ depends: [
   "dune" {>= "1.11.0"}
 ]
 synopsis: "Pin current process to given core number"
+description: "
+Can also get the number of CPU cores online.
+"
 #url {
 #  src: "https://github.com/UnixJunkie/setcore/archive/vXXX.tar.gz"
 #  checksum: "md5=YYY"
